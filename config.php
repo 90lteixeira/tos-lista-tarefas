@@ -3,9 +3,9 @@ error_reporting(1);
 define("VP_DB_HOST", "localhost");
 define("VP_DB_HOST_NAME", "admin_tos");
 define("VP_DB_HOST_USER", "admin_jogo");
-define("VP_DB_HOST_PASS", "tos");
+define("VP_DB_HOST_PASS", "senhajogo");
 if (!defined('SISDB_HOST_PASS'))
-    define("SISDB_HOST_PASS", "tos");
+    define("SISDB_HOST_PASS", "senhajogo");
 
 define('DB', __DIR__ . '/models/db.php');
 define('HDO', __DIR__ . '/models/hdo.php');
