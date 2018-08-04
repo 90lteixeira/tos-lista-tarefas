@@ -657,3 +657,7 @@ body {
     font-weight: bold;
     padding: 10px;
 }
+
+.form-group{
+    padding-bottom: 5px;
+}

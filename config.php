@@ -6,6 +6,8 @@ define("VP_DB_HOST_USER", "admin_jogo");
 define("VP_DB_HOST_PASS", "senhajogo");
 if (!defined('SISDB_HOST_PASS'))
     define("SISDB_HOST_PASS", "senhajogo");
+if (!defined('URLANTERIOR'))
+    define('URLANTERIOR', filter_input(INPUT_SERVER, 'HTTP_REFERER'));
 
 define('DB', __DIR__ . '/models/db.php');
 define('HDO', __DIR__ . '/models/hdo.php');

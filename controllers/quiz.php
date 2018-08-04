@@ -13,7 +13,6 @@ class Quiz {
 
     private $tb;
     private $tabela = 'quiz';
-    private $essenciais = '';
 
     public function __construct() {
         $this->tb = new TablePdo();
@@ -35,25 +34,13 @@ class Quiz {
     public function save($params) {
                                         
         $this->tb->setClear();
-        $this->tb->setCampo('nome_for', $params['nome_for']);
-        $this->tb->setCampo('nomefantasia_for', $params['nomefantasia_for']);
-        $this->tb->setCampo('cpfcnpj_for', $params['cpfcnpj_for']);
-        $this->tb->setCampo('telefone_for', $params['telefone_for']);
-        $this->tb->setCampo('observacao_for', $params['observacao_for']);
-        $this->tb->setCampo('cep_for', $params['cep_for']);
-        $this->tb->setCampo('cidade_for', $params['cidade_for']);
-        $this->tb->setCampo('endereco_for', $params['endereco_for']);
-        $this->tb->setCampo('estado_for', $params['estado_for']);
-        $this->tb->setCampo('bairro_for', $params['bairro_for']);
-        $this->tb->setCampo('cod_pet_fk', $_SESSION['lembrar']['cod_pet']);
+        $this->tb->setCampo('pergunta_qui', $params['pergunta_qui']);
+        $this->tb->setCampo('resposta_qui', $params['resposta_qui']);
         $this->tb->setTabela($this->tabela);
 
         if ($this->tb->insert()) {
-            $_SESSION['lastfornecedor'] = $this->tb->ultimoRegistro();
-            $this->essenciais->setLog('Cadastro de Fornecedor', $this->tabela);
-            return_session('Fornecedor cadastrado com sucesso.', 'success', '/fornecedor/'.$_SESSION['lastfornecedor']);
+            return_session('Pergunta cadastrada com sucesso.', 'success');
         } else {
-            $this->essenciais->setLog('[ERRO] Cadastro de Fornecedor', $this->tabela);
             return_session('Não foi possível continuar, tente novamente');
         }
         

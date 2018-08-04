@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 function logMsg($msg, $level = 'info', $query = '') {
     // variável que vai armazenar o nível do log (INFO, WARNING ou ERROR)
     $levelStr = '';

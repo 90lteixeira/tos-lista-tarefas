@@ -19,6 +19,9 @@
     RewriteRule ^home/?$                                            /views/index.php  [NC,L]
     RewriteRule ^principal/?$                                       /views/principal.php [NC,L]
     RewriteRule ^quiz/?$                                            /views/quiz.php [NC,L]
+
+#cadastro
+    RewriteRule ^cadastro-quiz/?$                                   /views/cadastro/quiz.php [NC,L]
     
 </IfModule>
 

@@ -39,4 +39,5 @@ $arPerguntas = $quiz->getQuiz($params['busca']);
             </tbody>
         </table>
     </div>
+    <div class="col-md-12 text-right"> Total de perguntas cadastradas: <?= count($arPerguntas)?></div>
 </div>
