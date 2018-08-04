@@ -5,6 +5,10 @@ session_start();
 include_once DB;
 include_once HDO;
 include_once ESSENCIAIS;
+
+if (empty($_COOKIE['tos_key'])) {
+    header('location: /home');
+}
 ?> 
 <!DOCTYPE html>
 <html>
