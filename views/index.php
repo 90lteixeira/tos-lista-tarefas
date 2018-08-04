@@ -1,6 +1,9 @@
 <?php
 error_reporting(1);
 session_start();
+
+if ($_COOKIE['tos_key'])
+    header('location: /principal');
 ?>
 
 <!DOCTYPE html>
