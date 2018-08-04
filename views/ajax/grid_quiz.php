@@ -35,6 +35,7 @@ $arPerguntas = $quiz->getQuiz($params['busca']);
                         </td> 
                     </tr>
                 <?php } ?>
+                <?= !count($arPerguntas) ? 'Nenhuma resposta encontrada.' : ''?>
             </tbody>
         </table>
     </div>
