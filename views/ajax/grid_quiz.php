@@ -16,7 +16,7 @@ $arPerguntas = $quiz->getQuiz($params['busca']);
         <div class="panel-title">Perguntas e respostas</div>
 
         <div class="panel-options text-muted">
-            Palavra pesquisada: <?= $params['busca'] ? $params['busca'] : '-----'?>
+            Palavra pesquisada: <?= $params['busca'] ? $params['busca'] : '-----' ?>
         </div>
     </div>
     <div class="panel-body">
@@ -31,17 +31,17 @@ $arPerguntas = $quiz->getQuiz($params['busca']);
                 <?php foreach ($arPerguntas as $pergunta) { ?>
                     <tr>
                         <td class="col-md-10">
-                            <span class="text-muted">Pergunta:</span> <?= $pergunta['pergunta_qui']?><br>
-                            <span class="text-muted">Resposta:</span> <?= $pergunta['resposta_qui']?>
+                            <span class="text-muted">Pergunta:</span> <?= $pergunta['pergunta_qui'] ?><br>
+                            <span class="text-muted">Resposta:</span> <?= $pergunta['resposta_qui'] ?>
                         </td> 
                         <td  class="col-md-2">
-                            <a href="/cadastro-quiz/<?= $pergunta['id_quiz']?>"><span class="glyphicon glyphicon-edit alert-info"></span></a>
+                            <a href="/cadastro-quiz/<?= $pergunta['id_quiz'] ?>"><span class="glyphicon glyphicon-edit alert-info"></span></a>
                         </td> 
                     </tr>
                 <?php } ?>
-                <?= !count($arPerguntas) ? 'Nenhuma resposta encontrada.' : ''?>
             </tbody>
         </table>
+        <?= !count($arPerguntas) ? '<span class="alert alert-warning col-md-12">Nenhuma resposta encontrada.</span>' : '' ?>
     </div>
-    <div class="col-md-12 text-right"> Total de perguntas cadastradas: <?= count($arPerguntas)?></div>
+    <div class="col-md-12 text-right"> Total de perguntas cadastradas: <?= count($arPerguntas) ?></div>
 </div>
