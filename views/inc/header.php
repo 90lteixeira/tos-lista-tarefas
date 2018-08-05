@@ -85,7 +85,7 @@ if (empty($_COOKIE['tos_key'])) {
                                 </a>
                                 <ul>
                                     <li><a href="/quiz">Questionário</a></li>
-                                    <li><a href="/cadastro-quiz">Cadastro</a></li>
+                                    <li><a href="/cadastro-quiz/">Cadastro</a></li>
                                 </ul>
                             </li> 
                         </ul>

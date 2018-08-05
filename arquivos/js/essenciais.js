@@ -5,14 +5,14 @@ function campoPesquisa(url, pag) {
         $("#busca").focus();
     });
     var typingTimer; //timer identifier
-    var doneTypingInterval = 1000; //time in ms, 5 second for example
+    var doneTypingInterval = 300; //time in ms, 5 second for example
 
     //on keyup, start the countdown
     $('#busca').keyup(function () {
         clearTimeout(typingTimer);
         if ($('#busca').val()) {
             typingTimer = setTimeout(function () {
-                pesquisarajax($('#busca').val())
+                pesquisarajax($('#busca').val());
             }, doneTypingInterval);
         }
     });

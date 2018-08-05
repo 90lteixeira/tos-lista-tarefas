@@ -21,7 +21,7 @@
     RewriteRule ^quiz/?$                                            /views/quiz.php [NC,L]
 
 #cadastro
-    RewriteRule ^cadastro-quiz/?$                                   /views/cadastro/quiz.php [NC,L]
+    RewriteRule ^cadastro-quiz/([0-9]*)/?$                          /views/cadastro/quiz.php?id_quiz=$1 [NC,L]
     
 </IfModule>
 

@@ -24,14 +24,18 @@ $arPerguntas = $quiz->getQuiz($params['busca']);
             <thead>
                 <tr>
                     <th>Perguntas / Respostas</th> 
+                    <th>#</th> 
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($arPerguntas as $pergunta) { ?>
                     <tr>
-                        <td>
+                        <td class="col-md-10">
                             <span class="text-muted">Pergunta:</span> <?= $pergunta['pergunta_qui']?><br>
                             <span class="text-muted">Resposta:</span> <?= $pergunta['resposta_qui']?>
+                        </td> 
+                        <td  class="col-md-2">
+                            <a href="/cadastro-quiz/<?= $pergunta['id_quiz']?>"><span class="glyphicon glyphicon-edit alert-info"></span></a>
                         </td> 
                     </tr>
                 <?php } ?>
