@@ -32,13 +32,13 @@ if ($cod)
                     <div class="form-group">
                         <label for="pergunta_qui" class="col-sm-2 control-label">Pergunta:</label>
                         <div class="col-sm-10">
-                            <input value="<?= $questionario['pergunta_qui'] ?>" type="text" class="form-control" id="pergunta_qui" name="pergunta_qui" placeholder="Digite palavra chave ou parte da pergunta">
+                            <input required="true" value="<?= $questionario['pergunta_qui'] ?>" type="text" class="form-control" id="pergunta_qui" name="pergunta_qui" placeholder="Digite palavra chave ou parte da pergunta">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="resposta_qui" class="col-sm-2 control-label">Resposta:</label>
                         <div class="col-sm-10">
-                            <input value="<?= $questionario['resposta_qui'] ?>" type="text" class="form-control" id="resposta_qui" name="resposta_qui" placeholder="Digite a resposta">
+                            <input required="true" value="<?= $questionario['resposta_qui'] ?>" type="text" class="form-control" id="resposta_qui" name="resposta_qui" placeholder="Digite a resposta">
                         </div>
                     </div>
                     <div class="form-group">
